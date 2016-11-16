@@ -1,0 +1,318 @@
+/* 头部 */
+#top{
+	border: 15px solid #000;
+}
+body{
+	width: 100%;
+	height: 100%;
+	background: #f4f4f4;
+}
+.le{
+	float: left;
+}
+.ri{
+	float: right;
+}
+.clear{
+	overflow: hidden;
+}
+#title{
+	width: 960px;
+	margin: 0 auto;
+	padding-top: 15px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #c0c0c0;
+}
+#title .ziti{
+	height: 75px;
+	line-height: 75px;
+}
+#title span{
+	font-size: 14px;
+	color: #fe9b00;
+	margin-left: 80px;
+	font-weight: bold;
+	cursor: pointer;
+}
+#title span:hover{
+	color: #000003;
+}
+/* 连接 */
+a:link{
+	color: #fe9b00;
+}
+a:visited{
+	color: #090909;
+}
+a:hover{
+	color: #fe9b00;
+}
+a:active{
+	color: #090909;
+}
+
+/* 尾部 */
+#bot{
+	width: 100%;
+	background: #e2e2e2;
+	margin-top: 35px;
+}
+#bot .bot_w{
+	width: 960px;
+	margin: 0 auto;
+	padding: 20px 0;
+}
+.bot_w p{
+	color: #666;
+	line-height: 27px;
+}
+
+/* index */
+#con1{
+	width: 960px;
+	margin: 20px auto;
+}
+#con2{
+	width: 960px;
+	margin: 0px auto;
+}
+#con2 p{
+	font-size: 14px;
+	color: #090909;
+	padding-bottom: 10px;
+}
+.yewu{
+	width: 470px;
+}
+.yewu ul{
+	border: 1px solid #e7e9ed;
+}
+.yewu ul,.shuju .shuju_con{
+	border-top: 5px solid #090909;
+	background: #fff;
+}
+.yewu ul li{
+	padding: 10px 15px;
+	overflow: hidden;
+}
+.yewu img{
+	float: left;
+}
+.yewu .yewu_con_ri{
+	width: 255px;
+	float: right;
+	padding-left: 10px;
+}
+.yewu h1{
+	font-size: 14px;
+	color: #333;
+	text-indent: 2em;
+}
+.yewu h5{
+	text-align: right;
+}
+.yewu h5 var{
+	color: #fe9b00;
+	font-size: 12px;
+	background: #090909;
+	padding: 3px 1px;
+}
+.shuju .shuju_con{
+	width: 470px;
+	height: 306px;
+	background: url(../images/biao2.jpg) center center no-repeat;
+}
+.shuju .shuju_con li{
+	width: 235px;
+	height: 150px;
+	float: left;
+}
+.shuju .shuju_con li dl{		
+	padding: 30px 25px 0 30px;
+}
+.shuju .shuju_con li dt{
+	font-size: 14px;
+	font-weight: bold;
+	color: #333;
+	margin-bottom: 10px;
+}
+.shuju .shuju_con li dd{
+	font-size: 14px;
+	color: #333;
+	text-indent: 2em;
+}
+
+
+/* common */
+#com_con{
+	width: 960px;
+	margin: 0 auto;
+	overflow: hidden;
+	margin-top: 25px;
+}
+#com_con1{
+	width: 158px;
+	height: 238px;
+	border: 1px solid #e3e3e3;
+	float: left;
+}
+#com_con1 p{
+	background: #090909;
+	color: #fe9b00;
+	font-size: 14px;
+	font-weight: bold;
+	height: 33px;
+	line-height: 33px;
+	padding-left: 10px;
+}
+#com_con1 ol{
+	background: #fff;
+	overflow: hidden;
+	height: 205px;
+}
+#com_con1 ol li{
+	float: left;
+	background: url(../images/wap_05.png) center center no-repeat;
+	text-align: right;
+	padding-right: 25px;
+	width: 133px;
+	height: 32px;
+	line-height: 32px;
+	cursor: pointer;
+}
+#com_con2{
+	width: 778px;
+	border: 1px solid #e2e2e2;
+	float: right;
+	background: #fff;
+}
+#com_con2 h5{
+	text-align: right;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #e2e2e2;
+}
+#com_con2 h5 var{
+	color: #fe9b00;
+	font-size: 12px;
+	background: #090909;
+	padding: 3px 1px;
+}
+.com_con2_right{
+	display: none;
+}
+.com_con2_title{
+	width: 764px;
+	height: 33px;
+	line-height: 33px;
+	background: #f7f9fa;
+	color: #090909;
+	font-family: "宋体";
+	padding-left: 13px;
+}
+.com_con2_title em,.wap_con_le em{
+	color: #0146af;
+}
+.com_con2_con{
+	background: #fff;
+	padding: 20px 40px 50px 40px;
+	overflow: hidden;
+}
+.com_con2_con .wap_con_le{
+	float: left;
+	width: 366px;
+}
+.com_con2_con strong{
+	display: block;
+	padding-bottom: 20px;
+	font-weight: bold;
+	padding-top: 10px;
+}
+.com_con2_con h6,strong,.wap_con_le_dizhi{
+	font-family: "宋体";
+	color: #090909;
+	text-indent: 2em;
+	line-height: 30px;
+	font-weight: lighter;
+}
+.wap_con_le_dizhi{
+	padding-top: 15px;
+	margin-bottom: 20px;
+}
+.QRcode{
+	margin-left: 23px;
+}
+
+/* yewu app */
+.app_con_le_clear{
+	width: 364px;
+	height: 210px;
+	border: 1px solid #e2e2e2;
+	overflow: hidden;
+	background: #fcfcfc;
+	margin-top: 20px;
+}
+.app_con_le_le{
+	font-family: "宋体";
+	color: #090909;
+	float: left;
+	padding: 15px 0 0 0px;
+
+}
+.app_con_le_ri{
+	float: right;
+	position: relative;
+}
+.app_con_le_ri h3{
+	background: #090909 url(../images/applogo.png) 5px 6px no-repeat;
+	color: #fe9b00;
+	padding: 8px 3px 8px 30px;
+	width: 30px;
+	position: absolute;
+	top: 5px;
+	right: 14px;
+}
+#App .gg{
+	margin-top: 50px;
+}
+
+
+/* shuju  hezuo */
+/* .com_con2_con h5{
+	font-family: "宋体";
+	color: #090909;
+	line-height: 30px;
+	font-weight: lighter;
+} */
+.com_con2_con .shuju_con_gg{
+	width: 400px;
+	margin: 45px auto;
+}
+.com_con2_con .shuju_con_gg1{
+	width: 650px;
+	margin: 45px auto;
+}
+.com_con2_con .hezuo_con_gg{
+	width: 622px;
+	margin: 10px auto;
+}
+
+/* guanyu	 */
+.guanyuH{
+	height: 810px;
+}
+.com_con2_con_map{
+	width: 541px;
+	margin: 45px auto;
+}
+.com_con2_con li{
+	background: url(../images/bj.jpg) 0 0 no-repeat;
+	height: 45px;
+	line-height: 45px;
+	padding-left: 50px;
+	margin-left: 20px;
+}
+
+/* js */
+#com_con1 .select{
+	background: url(../images/wap_06.png) center center no-repeat;
+}

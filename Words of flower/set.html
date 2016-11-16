@@ -1,0 +1,135 @@
+<!doctype html>
+<html style="font-size:100px;">
+<head>
+	<meta charset="utf-8">
+	<title>设置</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">	
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<link rel="stylesheet" href="css/reset.css">
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	.box{
+		width: 6.4rem;
+		height: 11.36rem;
+		background: url(images/pair.png) 0 0 no-repeat;
+		background-size: 100% 100%;
+	}
+	.logintop{
+		height: .8rem;
+		line-height: .8rem;
+		text-align: center;
+		background: #e83e4a;
+	}
+	.logintop li:nth-child(1){
+		font-size: .34rem;
+		color: #fff;
+		float: left;
+		padding-left: .1rem;
+	}
+	.logintop li:nth-child(2){
+		font-size: .34rem;
+		color: #fff;
+		padding-right: .45rem;
+	}
+	.photo{
+		width: 1.8rem;
+		height: 1.8rem;
+		margin: .6rem auto;
+		background: url(images/addtou2.png) 0 0 no-repeat;
+		background-size: 100% 100%;
+	}
+	.photo input{
+		width: 1.8rem;
+		height: 1.8rem;
+		border: none;
+		opacity: 0;
+		cursor: pointer;
+	}
+	.user{
+		width: 6rem;
+		margin: .25rem auto 0;
+		overflow: hidden;
+	}
+	.user .wode{
+		float: left;
+		width: .8rem;
+		height: .8rem;
+		display: block;
+	}
+	.user .user_r{
+		float: right;
+		width: 5rem;
+		height: .8rem;
+		border-bottom: 1px solid #fff;
+		overflow: hidden;
+	}
+	.user .user_r input{
+		height: .8rem;
+		width: 4.5rem;
+		border: none;
+		font-size: .24rem;
+		line-height: .8rem;
+		background: rgba(255,255,255,0);
+		float: left;
+	}
+	.user .user_r img{
+		float: right;
+		margin-top: .25rem;
+	}
+
+	input::-webkit-input-placeholder{
+		color: #fff;
+	}
+	p{
+		width: 4.54rem;
+		height: .8rem;
+		line-height: .8rem;
+		margin: .9rem auto 0;
+		font-size: .36rem;
+		color: #fff;
+		text-align: center;
+		border-radius: .05rem;
+		background: rgba(255,255,255,0.3)
+	}
+</style>
+</head>
+<body>
+	<div class="box">
+		<ul class="logintop">
+			<li class="back">&lt;</li>
+			<li>设置</li>
+		</ul>
+		<div class="photo">
+			<input type="file" capture="photo">
+		</div>
+		<div class="user">
+			<img src="images/wode2.png" alt="" class="wode">
+			<div class="user_r">
+				<input type="text" name="" value="" placeholder="姓名">
+				<img src="images/youjt2.png" alt="">
+			</div>			
+		</div>
+		<div class="user">
+			<img src="images/xingbie2.png" alt="" class="wode">
+			<div class="user_r">
+				<input type="text" name="" value="" placeholder="性别">
+				<img src="images/youjt2.png" alt="">
+			</div>			
+		</div>
+		<div class="user">
+			<img src="images/shouji2.png" alt="" class="wode">
+			<div class="user_r">
+				<input type="text" name="" value="" placeholder="手机号码">
+				<img src="images/youjt2.png" alt="">
+			</div>			
+		</div>
+		<p>保存</p>
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/ort.js"></script>
+</html>

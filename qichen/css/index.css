@@ -1,0 +1,206 @@
+/* 公共 */
+*{
+	margin: 0;
+	padding: 0;
+	
+}
+ul{
+	list-style: none;
+}
+a{text-decoration: none;color:#fff}
+.clear{
+	overflow: hidden;
+}
+.lft{
+	float: left;
+}
+.rgt{
+	float: right;
+}
+.box,.result,.home{
+	width: 6.4rem;
+	height: 10.08rem;
+	background: url(../images/bg01.jpg) 0 0 no-repeat;
+	background-size: 100% 100%;
+	font-family: '黑体';
+}
+.indextop{
+	width: 6.1rem;
+	padding: 0 .15rem;
+	height: .7rem;
+	line-height: .7rem;
+	background: #000;
+	color: #fff;
+}
+.indextop li:nth-child(1){
+	float: left;
+	font-size: .25rem;
+}
+.indextop li:nth-child(2){
+	float: left;
+	margin-left: 1.9rem;
+	font-size: .3rem;
+}
+/* 返回 */
+.back{
+	cursor: pointer;
+}
+.circle{
+	float: right;
+	overflow: hidden;
+	margin-top: .35rem;
+	cursor: pointer;
+}
+.circle p{
+	width: .08rem;
+	height: .08rem;
+	background: #fff;
+	border-radius: 50%;
+	margin-left: .03rem;
+	float: left;
+}
+/* 自己 */
+.msyl{
+	width: 5.09rem;
+	margin: .1rem auto .3rem;
+}
+.btn{
+	width: 4.33rem; 
+	height: .97rem;
+	line-height: .97rem;
+	margin-top: .1rem;
+	font-size: .3rem;
+	font-weight: bold;
+	text-align: center;
+	font-family: '黑体';
+	color: #fff;
+	font-style: italic;
+	cursor: pointer;
+	background: url(../images/btn01.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	text-shadow:0px 0px 2px #D95CEB,
+				0px 0px 2px #D95CEB,
+				0px 0px 2px #D95CEB,
+				0px 0px 2px #D95CEB;		
+}
+.scene{
+	width: 4.33rem;
+	margin: 0 auto;
+}
+.acti{
+	text-align: center;
+	font-size: .3rem;
+	color: #0637A0;
+	font-weight: bold;
+	text-decoration: underline;
+	font-style: italic;
+	margin-top: .2rem;
+	cursor: pointer;
+}
+.intro,.isscene,.success,.friend,.rule,.NO,.reg{
+	width: 6.4rem;
+	height: 10.08rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.5);
+	display: none;
+}
+.show1,.show2{
+	width: 4.45rem;
+	margin: 2.2rem auto;
+	border: .05rem solid #00286F;
+	border-radius: 0.2rem;
+	background: #fff;
+	padding: 35px 25px 30px;
+	font-family: '黑体';
+	font-weight: bold;
+}
+.show2{
+	margin-top: 3rem;
+}
+.activity{
+	font-weight: bold;
+	font-family: '黑体';
+}
+dt,.rule1{
+	color: #012976;
+	font-size: .22rem;
+	margin-bottom: .1rem;
+	list-style: none;
+}
+.rule ol li{
+	margin-left: .32rem;
+}
+dd,.box h4,.rule ol li{
+	color: #747474;
+	font-size: .2rem;
+	line-height: 0.35rem;
+}
+.show1 p{
+	margin-top: 0.2rem;
+}
+.lzi1{
+	font-size: .3rem;
+	color: #022971;
+	text-align: center;
+	font-weight: bold;
+	font-family: '黑体';
+	line-height: .4rem;
+}
+.show2 p:nth-child(4),.show2 p:nth-child(5){
+	width: 3.7rem;
+	margin-left: .2rem;
+}
+
+/* 抽奖 */
+.box h3{
+	text-align: center;
+	color: #022871;
+	font-size: .4rem;
+	font-family: '黑体';	
+}
+.box h4{
+	text-align: center;
+}
+.qcimg{
+	width: 6rem;
+	margin: .05rem auto;
+	overflow: hidden;
+}
+.qcimg li{
+	width: 1.99rem;
+	float: left;
+}
+.qcimg img{
+	width: 1.99rem;
+	display: block;
+}
+/* 未中奖 已参加抽奖*/
+.box h1,.box h2{
+	text-align: center;
+	font-size: .6rem;
+	color: red;
+	margin-top: .35rem;
+	font-family: '黑体';
+}
+.box .sorry{
+	width: 4.8rem;
+	margin: 0 auto;
+	font-family: '黑体';
+	font-size: .3rem;
+	color: #777F88;
+	line-height: .4rem;
+	margin-top: .3rem;
+}
+.box .sorry strong{
+	font-size: .3rem;
+	color: #0E3573;
+	text-shadow:0px 0px 2px #0E3573,
+				0px 0px 2px #0E3573;
+	font-size: '微软雅黑';
+}
+.box .sorry span{
+	font-size: .3rem;
+	color: #0E3573;
+}

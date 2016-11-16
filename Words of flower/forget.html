@@ -1,0 +1,170 @@
+<!doctype html>
+<html style="font-size:100px;">
+<head>
+	<meta charset="utf-8">
+	<title>忘记密码</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<link rel="stylesheet" href="css/reset.css">
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			width: 6.4rem;
+			height: 11.36rem;
+			background: url(images/login.png) 0 0 no-repeat;
+			background-size: 100% 100%;
+		}
+		.logintop{
+			height: .8rem;
+			line-height: .8rem;
+			text-align: center;
+		}
+		.logintop li:nth-child(1){
+			font-size: .34rem;
+			color: #fff;
+			float: left;
+			padding-left: .1rem;
+		}
+		.logintop li:nth-child(2){
+			font-size: .34rem;
+			color: #fff;
+			padding-right: .45rem;
+		}
+		.regicon{
+			width: 4.77rem;
+			margin: 2.4rem auto 1.2rem;
+			height: 4.4rem;
+		}
+		.regicon_top li:nth-child(1),.regicon_top li:nth-child(2){
+			width: 4.37rem;
+			height: .45rem;
+			border-radius: .05rem;
+			background: rgba(255,255,255,0.5);
+			padding: .2rem;
+			overflow: hidden;
+			margin-bottom: .05rem;
+		}
+		.regicon .regicon_top li:nth-child(3){			
+			width: 4.77rem;
+			height: .85rem;
+			overflow: hidden;
+		}
+		.yzm{
+			width: 2.6rem;
+			height: .45rem;
+			padding: .2rem;
+			border-radius: .05rem;
+			background: rgba(255,255,255,0.5);
+			float: left;
+		}
+		.regicon_top .yzm .yzmipt{
+			width: 1.5rem;
+		}
+		.regicon_top .yzmz{
+			width: 1.7rem;
+			margin-left: .05rem;
+			height: .85rem;
+			line-height: .85rem;
+			background: rgba(255,255,255,0.5);
+			text-align: center;
+			font-size: .2rem;
+			border-radius: .05rem;
+			color: #fff;
+			float: left;
+			cursor: pointer;
+		}
+		.regicon_top img{
+			width: .4rem;
+			height: .4rem;
+			float: left;
+		}
+		.regicon_top .ruser{
+			height: .45rem;
+			line-height: .45rem;
+			font-size: .2rem;
+			color: #fff;
+			background:  rgba(255,255,255,0);
+			padding-left: .2rem;
+			margin-left: .2rem;
+			border: none;
+			border-left: 1px solid #fff;
+			font-family: '微软雅黑';
+		}
+		.regicon_top input::-webkit-input-placeholder{
+			color: #fff;
+		}
+		.submit{
+			width: 4.77rem;
+			margin: 0 auto;
+			text-align: center;
+			height: .65rem;
+			line-height: .65rem;
+			background: rgba(255,255,255,0.5);
+			font-size: .27rem;
+			color: #fff;			
+			border-radius: .05rem;
+			font-family: '微软雅黑';
+			margin-top: .25rem;
+			border: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<ul class="logintop">
+			<li class="back">&lt;</li>
+			<li>忘记密码</li>
+		</ul>
+		<div class="regicon">
+			<ul class="regicon_top">
+				<li>
+					<img src="images/user1.png" alt="">
+					<input type="text" name="" value="" class="ruser" placeholder="用户名">
+				</li>
+				<li>
+					<img src="images/photo1.png" alt="">
+					<input type="text" name="" value="" class="ruser" placeholder="手机号码">
+				</li>
+				<li>
+					<div class="yzm">
+						<img src="images/pass1.png" alt="">
+						<input type="text" name="" value="" class="ruser yzmipt" placeholder="验证码">
+					</div>
+					<div class="yzmz">获取验证码</div>
+				</li>				
+			</ul>
+			<button class="submit">提交</button>
+		</div>
+		
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/ort.js"></script>
+<script type="text/javascript">
+	var n=5;
+	var time=null;
+	var x=0;
+	$('.yzmz').click(function  () {
+		if (x==0) {
+			$('.yzmz').html('('+n+')'+'s');
+			clearInterval(time);
+			time=setInterval(function  () {
+				x=1;
+				n--;
+				if (n<0) {
+					clearInterval(time);
+					console.log('111');
+					$('.yzmz').html('获取验证码');
+					n=0;
+				}else{
+					$('.yzmz').html('('+n+')'+'s');
+				}; 		
+			},1000)
+		};		
+	})	
+</script>
+</html>

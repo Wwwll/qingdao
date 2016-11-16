@@ -1,0 +1,108 @@
+/* 场外中奖 */
+.noherecon{
+	width: 5.8rem;
+	height: 10.08rem;
+	padding: .2rem;
+}
+.noherecon .good{
+	font-size: .45rem;
+	color: red;
+	text-align: center;
+}
+.noherecon .zan{
+	width: 5.64rem;
+	margin: .25rem .2rem .15rem;
+}
+.sub{
+	width: 4.33rem;
+	margin: 0 auto;
+}
+.noherecon p{
+	font-size: .25rem;
+	color: #959AA3;
+	font-family: '黑体';
+	margin-bottom: .1rem;
+}
+.share{
+	width: 5.0rem;
+	margin: 0 auto;
+	height: .73rem;
+	margin-top: .2rem;
+	line-height: .73rem;
+}
+.share .logo li{
+	float: left;
+	margin-left: .2rem;
+}
+/* 场内中奖 */
+.herecon,.qckhjcon{
+	width: 6.1rem;
+	height: 10.08rem;
+	padding: 0 .1rem;
+}
+.herecon .lucky{
+	font-size: .3rem;
+	color: #042777;
+	font-weight: bold;
+	font-family: '黑体';
+	margin-top: .2rem;
+	margin-bottom: .1rem;
+	text-align: center;
+}
+.herecon .wbg{
+	width: 5.9rem;
+	padding: .1rem;
+	background: #fff;
+}
+.herecon .wbg p,.herecon p,.qckhjcon p{
+	font-size: .25rem;
+	color: #878787;
+	margin: .15rem 0;
+	text-align: center;
+	font-family: '黑体';
+}
+.herecon .wbg .dm{
+	width: 4.18rem;
+	height: .75rem;
+	line-height: .75rem;
+	margin: 0 auto;
+	background: url(../images/bg03.jpg) 0 0 no-repeat;
+	background-size: 100% 100%;
+	position: relative;
+}
+/* .herecon .wbg .dm ul{
+	position: absolute;
+	top: 0;
+} */
+.herecon .wbg .dm li{
+	font-size: .5rem;
+	float: left;
+	color: #fff;
+}
+.herecon .wbg .dm li:nth-child(1){	
+	margin: 0 .39rem;
+}
+.herecon .wbg .dm li:nth-child(2){	
+	margin-left: .25rem;
+}
+.herecon .wbg .dm li:nth-child(3){	
+	margin-left: .55rem;
+}
+.herecon .wbg .dm li:nth-child(4){	
+	margin-left: .58rem;
+}
+.herecon .wbg .dm li:nth-child(5){	
+	margin-left: .48rem;
+}
+.herecon .wbg .car{
+	width: 4.85rem;
+	margin: .1rem auto;
+}
+.herecon h6{
+	font-size: .25rem;
+	color: #042777;
+	font-weight: bold;
+	font-family: '黑体';
+	margin-top: .2rem;
+	margin-bottom: .1rem;
+}

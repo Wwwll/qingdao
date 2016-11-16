@@ -1,0 +1,205 @@
+<!doctype html>
+<html style="font-size:100px;">
+<head>
+	<meta charset="utf-8">
+	<title>注册</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<link rel="stylesheet" href="css/reset.css">
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			width: 6.4rem;
+			height: 11.36rem;
+			background: url(images/login.png) 0 0 no-repeat;
+			background-size: 100% 100%;
+		}
+		.logintop{
+			height: .8rem;
+			line-height: .8rem;
+			text-align: center;
+		}
+		.logintop li:nth-child(1){
+			font-size: .34rem;
+			color: #fff;
+			float: left;
+			padding-left: .1rem;
+		}
+		.logintop li:nth-child(2){
+			font-size: .34rem;
+			color: #fff;
+			padding-right: .45rem;
+		}
+		.regicon{
+			width: 4.77rem;
+			margin: 2.4rem auto 1.2rem;
+			height: 4.4rem;
+		}
+		.regicon_top li{
+			width: 4.37rem;
+			height: .45rem;
+			border-radius: .05rem;
+			background: rgba(255,255,255,0.5);
+			padding: .2rem;
+			overflow: hidden;
+			margin-bottom: .05rem;
+		}
+		.regicon_top img{
+			width: .4rem;
+			height: .4rem;
+			float: left;
+		}
+		.regicon_top .ruser,.passr,.psdr{
+			height: .45rem;
+			line-height: .45rem;
+			font-size: .2rem;
+			color: #fff;
+			background:  rgba(255,255,255,0);
+			padding-left: .2rem;
+			margin-left: .2rem;
+			border: none;
+			border-left: 1px solid #fff;
+			font-family: '微软雅黑';
+		}
+		.regicon_top input::-webkit-input-placeholder{
+			color: #fff;
+		}
+		.register{
+			width: 4.77rem;
+			height: .65rem;
+			line-height: .65rem;
+			background: rgba(255,255,255,0.5);
+			font-size: .27rem;
+			color: #fff;
+			margin-top: .48rem;
+			border: none;
+			border-radius: .05rem;
+			font-family: '微软雅黑';
+		}
+		.regicon p{
+			font-size: .24rem;
+			color: #fff;
+			margin-top: .3rem;
+			margin-left: .2rem;
+			cursor: pointer;
+		}
+		.regibot{
+			width: 4.77rem;
+			margin: 0 auto;
+			margin-bottom: 1.22rem;
+			text-align: center;
+			height: .65rem;
+			line-height: .65rem;
+			background: rgba(255,255,255,0.5);
+			font-size: .27rem;
+			color: #fff;			
+			border-radius: .05rem;
+			font-family: '微软雅黑';
+		} 
+		.tiao{
+			width: 3rem;
+			height: 2rem;
+			text-align: center;
+			line-height: 2rem;
+			font-size: .2rem;
+			position: absolute;
+			color: #fff;
+			top: 4rem;
+			left: 1.5rem;
+			background: rgba(180,128,236,0.3);
+			border-radius: .3rem;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<ul class="logintop">
+			<li class="back">&lt;</li>
+			<li>注册</li>
+		</ul>
+		<div class="regicon">
+			<ul class="regicon_top">
+				<li>
+					<img src="images/user1.png" alt="">
+					<input type="text" name="" value="" class="ruser" placeholder="用户名">
+				</li>
+				<li>
+					<img src="images/pass1.png" alt="">
+					<input type="password" name="" value="" class="passr" placeholder="密码">
+				</li>
+				<li>
+					<img src="images/pass1.png" alt="">
+					<input type="password" name="" value="" class="psdr" placeholder="确认密码">
+				</li>
+			</ul>
+			<button class="register">注册</button>	
+			<p>已有账号登录</p>		
+		</div>
+		<div class="regibot">社交账号一键登录</div>
+		<div class="tiao">
+			<span>3</span>秒后返回登录页面
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/ort.js"></script>
+<script type="text/javascript">
+	$('.regicon p').click(function  () {
+		window.open('login.html','_blank');
+	})
+
+	function setCookie (key,value,days) {
+		var date=new Date();
+		date.setDate(date.getDate()+days);
+		document.cookie=key+"="+escape(value)+"; expires="+date;
+	}
+	function getCookie (key) {
+		var arr=document.cookie.split('; ');
+		for (var i = 0; i < arr.length; i++) {
+			var arr1=arr[i].split('=');
+			if (arr1[0]==key) {
+				return unescape(arr1[1]);
+			};
+		};
+		return false;
+	}
+	function removeCookie (key) {
+		setCookie (key,'0',-1);
+	}
+
+	//判断正则  没写
+	// var reg=/[0-9]{11}/g; //用户名/手机号
+	// var reg1=/^.{6,16}$/g;  //6~16位数字、字母、下划线
+	var num=3;
+	$('.register').click(function  () {
+		if ($('.ruser').val()==''||$('.passr').val()==''||$('.psdr').val()=='') {
+			alert('用户名与密码不能为空！');
+		}else if($('.passr').val()!=$('.psdr').val()){
+			alert('密码与确认密码必须一致')
+		}else if(getCookie('user')==$('.ruser').val()){
+			alert('该用户已被注册')
+		}else{
+			alert('注册成功');
+			//跳转页面
+			$('.tiao').show();
+			var time=setInterval(function  () {
+				num--;
+				if (num<=0) {
+					window.open('login.html','_self');  
+					// window.history.back();
+					clearInterval(time);
+				};
+				$('.tiao span').html(num);
+			},1000)			
+			setCookie('user',$('.ruser').val(),7);
+			setCookie('pass',$('.passr').val(),7);
+		};
+				
+	})
+</script>
+</html>

@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>数据</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+	<div id="top"></div>
+	<div id="title" class="clear">
+		<img class="le" src="images/logo1.png" alt="">
+		<div class="ri ziti">
+			<span><a href="index.html">首页</a></span>
+			<span><a href="yewu.html">业务</a></span>
+			<span><a href="shuju.html">数据</a></span>
+			<span><a href="hezuo.html">合作</a></span>
+			<span><a href="about.html">关于</a></span>
+		</div>		
+	</div>
+	<div id="com_con">
+		<div id="com_con1"> 
+			<p>数据</p>
+			<ol>
+				<li class="select">概览</li> 
+				<li>开奖号码</li>
+				<li>走势图表</li>
+				<li>竞技数据</li>
+				<li>彩票资讯</li>
+			</ol>
+		</div>
+		<div id="com_con2">
+			<!-- 概览 -->
+			<div class="com_con2_right">
+				<div class="com_con2_title">
+					您的位置：<em>首页</em> > <em>业务</em> >  概览 
+				</div>
+				<div class="com_con2_con">
+					<h6>基于WAP 1.0/2.0 技术开发的，国内最早的移动互联网手机投注 平台。完美运行于塞班、安卓等各版本操作系统。联普科技首个将电话购彩业务移植至WAP平台，首个在WAP平台实现走势图标的展示，首个在WAP平台实现竞技彩投注，首个在WAP平台实现充值，购彩，提现一站式服务。</h6>
+					<h6>时至今日，拘于中国速率较低的网络环境普联科技WAP手机投注平台凭借省流量、高速度，依旧拥有巨大访问、使用量。</h6>	
+					<div class="shuju_con_gg">
+						<img src="images/shuju_01.jpg" alt="">
+					</div>	
+					
+				</div>
+			</div>
+			<!-- 开奖号码 -->
+			<div class="com_con2_right">
+				<div class="com_con2_title">
+					您的位置：<em>首页</em> > <em>业务</em> >  开奖号码 
+				</div>
+				<div class="com_con2_con">
+					<h6>源于福彩中心、体彩中心官方快捷及时的开奖数据。</h6>
+					<div class="shuju_con_gg">
+						<img src="images/shuju_02.jpg" alt="">
+					</div>	
+					
+				</div>
+			</div>
+			<!-- 走势图表 -->
+			<div class="com_con2_right">
+				<div class="com_con2_title">
+					您的位置：<em>首页</em> > <em>业务</em> >  走势图表 
+				</div>
+				<div class="com_con2_con">
+					<h6>源于福彩中心、体彩中心官方快捷及时的开奖数据。</h6>
+					<div class="shuju_con_gg1">
+						<img src="images/shuju_03.jpg" alt="">
+						<img src="images/shuju_04.jpg" alt="">
+						<img src="images/shuju_05.jpg" alt="">
+					</div>					
+				</div>
+			</div>
+			<!-- 彩票资讯 -->
+			<div class="com_con2_right">
+				<div class="com_con2_title">
+					您的位置：<em>首页</em> > <em>业务</em> >  彩票资讯 
+				</div>
+				<div class="com_con2_con">
+					
+					<div class="shuju_con_gg1">
+						<img src="images/shuju_06.jpg" alt="">
+					</div>					
+				</div>
+			</div>
+			<!-- 竞争数据 -->
+			<div class="com_con2_right">
+				<div class="com_con2_title">
+					您的位置：<em>首页</em> > <em>业务</em> >  竞争数据 
+				</div>
+				<div class="com_con2_con">					
+					<div class="shuju_con_gg1">
+						<img src="images/shuju_07.jpg" alt="">
+					</div>					
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="bot">
+		<div class="bot_w clear">
+			<div class="le">
+				<p>北京普联科技有限公司 © 版权所有 2005-2016 <br>经营许可证编号：京ICP证080360号 | 市公网安备1101060</p>
+			</div>
+			<div class="ri">
+				<img src="images/logo2.png" alt="">
+			</div>
+		</div>		
+	</div>
+</body>
+<script type="text/javascript">
+	var lis=document.getElementsByTagName('li');
+	var lis2=document.getElementsByClassName('com_con2_right');
+	
+	lis2[0].style.display="block";
+
+	for (var i = 0; i < lis.length; i++) {
+		lis[i].onclick=function  () {
+			for (var i = 0; i < lis.length; i++) {				
+				lis[i].className="";
+				lis2[i].style.display="none";
+				if(lis[i]==this){
+					lis[i].className="select";
+					lis2[i].style.display="block";
+				}
+			};
+		}
+	};
+</script>
+</html>

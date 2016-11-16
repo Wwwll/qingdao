@@ -1,0 +1,56 @@
+.qckhjcon .home1{
+	width: 3.12rem;
+	margin: .2rem auto 0;
+}
+.home .qckhjcon p{
+	text-align: left;
+}
+.lianxi1{
+	width: 5.94rem;
+	height: 0.86rem;
+	position: relative;
+	background: url(../images/shuru1.jpg) 0 0 no-repeat;
+}
+.lianxi2{
+	width: 5.94rem;
+	height: 0.86rem;
+	margin-top: .1rem;
+	margin-bottom: .3rem;
+	position: relative;
+	background: url(../images/shuru2.jpg) 0 0 no-repeat;
+}
+.lianxi input{
+	width: 5rem;
+	height: .82rem;
+	position: absolute;
+	top: 0rem;
+	left: .9rem;
+	font-size: .2rem;
+	/* border: none; */
+	outline: 0;   /* 没有蓝标 */
+}
+/* 活动规则 */
+
+/* 提交成功 */
+.lzi2{
+	font-size: .6rem;
+	color: #01266D;
+	text-align: center;
+	font-weight: bold;
+	font-family: '黑体';
+	margin-bottom: .3rem;
+}
+.lzi3{
+	font-size: .35rem;
+	color: #7C7C7C;
+	font-weight: bold;
+	font-family: '黑体';
+	line-height: .5rem;
+	margin-bottom: .3rem;
+}
+/* 朋友 */
+.friend .pop{
+	margin-top: .2rem;
+	width: 6.4rem;
+	height: 4.05rem;
+}
