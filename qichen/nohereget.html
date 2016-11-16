@@ -1,0 +1,71 @@
+<!doctype html>
+<html style="font-size:100px;">
+<head>
+	<meta charset="utf-8">
+	<title>抽奖结果</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/result.css">
+</head>
+<body>
+	<div class="result">
+		<ul class="indextop clear">
+			<li class="back"><返回</li>
+			<li><strong>抽奖结果</strong></li>
+			<li class="circle">
+				<p></p>
+				<p></p>
+				<p></p>
+			</li>
+		</ul>
+		<div class="noherecon">
+			<div class="good">人品不错哦！</div>
+			<div class="zan">
+				<p>恭喜你抽中价值<span>10</span>元的手机话费！请留下联系方式，24小时内话费将为您送上，请留意短信，谢谢！</p>
+			</div>		
+			<div id="cost"><img src="images/y10.png" alt=""></div>
+			<p class="">请收入手机号码24小时内为您充值</p>
+			<img src="images/shuru2.jpg" alt="">
+			<div class="sub">
+				<div class="btn">确认提交</div>
+			</div>			
+			<div class="share clear">
+				<p class="lft">分享好友积攒人品：</p>
+				<ul class="logo lft clear">
+					<li>
+						<img src="images/weixin.png" alt="">
+					</li>
+					<li>
+						<img src="images/xlwb.png" alt="">
+					</li>
+					<li>
+						<img src="images/txwb.png" alt="">
+					</li>
+				</ul>
+			</div>
+		</div>		
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/ort.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/award.js"></script>
+<script type="text/javascript">
+	//随机抽取话费
+	var arr=['<img src="images/y10.png" alt="">','<img src="images/y20.png" alt="">','<img src="images/y30.png" alt="">'];
+	var sjs=Math.floor(Math.random()*3);
+	$('#cost').html(arr[sjs]);
+	if (sjs==0) {
+		$('span').html(10);
+	}else if (sjs==1) {
+		$('span').html(20);
+	}else if (sjs==2) {
+		$('span').html(30);
+	};
+	//返回
+	$('.back').click(function  () {
+		window.open('award.html','_self');
+	})
+</script>
+</html>

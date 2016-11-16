@@ -1,0 +1,147 @@
+<!doctype html>
+<html style="font-size:100px;">
+<head>
+	<meta charset="utf-8">
+	<title>闪屏页</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name='viewport' content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		.box{
+			width: 6.4rem;
+			height: 11.36rem;
+			position: relative;
+		}
+		.list{
+			width: 6.4rem;
+			height: 11.36rem;
+		}
+		.list li{
+			display: none;
+		}
+		img{
+			width: 6.4rem;
+			height: 11.36rem;
+		}
+		ol{
+			width: 1.2rem;
+			height: .2rem;
+			position: absolute;
+			left: 2.68rem;
+			bottom: .8rem;
+			overflow: hidden;
+		}
+		ol li{
+			width: .2rem;
+			height: .2rem;
+			background: #fff;
+			border-radius: 50%;
+			margin-right: .2rem;
+			float: left;
+		}
+		.box .list .show{
+			display: block;
+		}
+		.box .select{
+			background: #e83e49;
+		}
+		.list li:nth-child(3){
+			position: relative;
+		}
+		.login,.register{
+			width: 2.46rem;
+			height: .78rem;
+			/* border: .01rem solid red; */
+			position: absolute;
+			bottom: 1rem;
+		}
+		.login{
+			left: .55rem;
+		}
+		.register{
+			right: .55rem;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<ul class="list">
+			<li class="show">
+				<img src="images/1.png" alt="">
+			</li>
+			<li>
+				<img src="images/2.jpg" alt="">
+			</li>
+			<li>
+				<img src="images/3.jpg" alt="">
+				<div class="login"></div>
+				<div class="register"></div>
+			</li>
+		</ul>
+		<ol class="circle">
+			<li class="select"></li>
+			<li></li>
+			<li></li>
+		</ol>
+	</div>	
+</body>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<!-- <script type="text/javascript" src="js/ort.js"></script> -->
+<script type="text/javascript">
+	var Html=document.getElementsByTagName('html')[0];
+	function re () {
+		var ww=document.documentElement.clientWidth;
+		var scale=100/640;
+		Html.style.fontSize=scale*ww+'px';
+	}
+	window.onresize=function  () {
+		re();
+	}
+	re();
+
+	// touch
+	var uls=document.getElementsByTagName('ul')[0];
+	var lis1=uls.getElementsByTagName('li');
+	var ols=document.getElementsByTagName('ol')[0];
+	var lis2=ols.getElementsByTagName('li');
+	var x0=0,x1=0,n=0;
+	window.addEventListener('touchstart',function  (e) {
+		x0=e.touches[0].clientX;
+		x1=e.touches[0].clientX;
+	},false)
+	window.addEventListener('touchmove',function  (e) {
+		x1=e.touches[0].clientX;
+	},false)
+	window.addEventListener('touchend',function  (e) {
+		if (x0-x1>50) {//左滑
+			lis1[n].style.display='none';
+			lis2[n].style.background='#fff';
+			n++;
+			if (n>lis1.length-1) {
+				n=0;
+			};
+		}else if(x0-x1<-50){
+			lis1[n].style.display='none';
+			lis2[n].style.background='#fff';
+			n--;
+			if (n<0) {
+				n=lis1.length-1;
+			};
+		};		
+		lis1[n].style.display='block';
+		lis2[n].style.background='#e83e49';
+	},false)
+	//登录 注册
+	$('.login').click(function  () {
+		window.open('login.html','_self');
+	})
+	$('.register').click(function  () {
+		window.open('register.html','_self');
+	})
+</script>
+</html>

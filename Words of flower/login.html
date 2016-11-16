@@ -1,0 +1,205 @@
+<!doctype html>
+<html style="font-size:100px;">
+<head>
+	<meta charset="utf-8">
+	<title>登录</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<link rel="stylesheet" href="css/reset.css">
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			width: 6.4rem;
+			height: 11.36rem;
+			background: url(images/login.png) 0 0 no-repeat;
+			background-size: 100% 100%;
+		}
+		.logintop{
+			height: .8rem;
+			line-height: .8rem;
+			text-align: center;
+		}
+		.logintop li:nth-child(1){
+			font-size: .34rem;
+			color: #fff;
+			float: left;
+			padding-left: .1rem;
+		}
+		.logintop li:nth-child(2){
+			font-size: .34rem;
+			color: #fff;
+			padding-right: .45rem;
+		}
+		.logo{
+			width: 2.4rem;
+			height: 2.4rem;
+			padding-top: 1.4rem;
+			margin: 0 auto;
+			margin-bottom: .9rem;
+		}
+		.logincon{
+			width: 4.56rem;
+			margin: 0 auto;
+		}
+		.logincon1,.logincon2,.loginbot{
+			width: 4.16rem;
+			height: .4rem;
+			background: rgba(255,255,255,0.5);
+			padding: .20rem;
+			border-radius: .05rem;
+		}
+		.logincon1{
+			border-radius:.05rem .05rem 0 0 ;
+		}
+		.logincon2{
+			border-top: 1px solid #fff;
+			border-radius: 0 0 .05rem .05rem;
+		}
+		.logincon1 img,.logincon2 img{
+			width: .4rem;
+			height: .4rem;
+			margin-top: .1rem;
+			float: left;
+		}
+		.userr,.pass{
+			width: 2.56rem;
+			height: .4rem;
+			font-size: .3rem;
+			padding-left: .2rem;
+			border: none;
+			float: left;
+		    margin-top: .09rem;
+		    margin-left: 0.1rem;
+			border-left: .01rem solid #fff;
+		}
+		.userr input,.pass input{
+			width: 2.56rem;
+			height: .4rem;
+			line-height: .4rem;
+			font-family: '微软雅黑';
+			font-size: .25rem;			
+			border: none;
+			background: rgba(255,255,255,0);
+		}
+		input::-webkit-input-placeholder{
+			color: #fff;
+		}
+		.login{
+			width: 4.56rem;
+			height: .8rem;
+			background: rgba(255,255,255,0.5);
+			color: #fff;
+			text-align: center;
+			line-height: .8rem;
+			margin-top: .5rem;
+			border: none;
+			font-size: .4rem;
+			border-radius: .05rem;
+			cursor: pointer;
+		}
+		.lcon_bot{
+			margin-top: .35rem;
+			overflow: hidden;
+			font-size: .24rem;
+			font-family: '微软雅黑';
+			color: #fff;
+		}
+		.lcon_bot .zczh{
+			float: left;
+			margin-right: .2rem;
+			cursor: pointer;
+		}
+		.lcon_bot .wjmm{
+			float: right;
+			margin-right: .2rem;
+			cursor: pointer;
+		}
+		.loginbot{
+			color: #fff;
+			font-size: .25rem;
+			text-align: center;
+			margin: .3rem auto;
+			background: rgba(255,255,255,0.5);
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<ul class="logintop">
+			<li class="back">&lt;</li>
+			<li>登录</li>
+		</ul>
+		<div class="logo">
+			<img src="images/logo2.png" alt="">
+		</div>
+		<div class="logincon">
+			<div class="logincon1">
+				<img src="images/user1.png" alt="">
+				<div class="userr">
+					<input type="text" name="" value="" placeholder="用户名/手机号" id="user">
+				</div>				
+			</div>
+			<div class="logincon2">
+				<img src="images/pass1.png" alt="">
+				<div class="pass">
+					<input type="password" name="" value="" placeholder="••••••" id="pass">
+				</div>
+				
+			</div>
+			<button class="login">Login in</button>
+			<div class="lcon_bot">
+				<div class="zczh">注册账号</div>
+				<div class="wjmm">忘记密码</div>
+			</div>
+		</div>
+		<div class="loginbot">社交账号一键登录</div>
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/ort.js"></script>
+<script type="text/javascript">
+	$('.zczh').click(function  () {
+		window.open('register.html','_blank');
+	})
+	$('.wjmm').click(function  () {
+		window.open('forget.html','_blank');
+	})
+
+	function setCookie (key,value,days) {
+		var date=new Date();
+		date.setDate(date.getDate()+days);
+		document.cookie=key+"="+escape(value)+"; expires="+date;
+	}
+	function getCookie (key) {
+		var arr=document.cookie.split('; ');
+		for (var i = 0; i < arr.length; i++) {
+			var arr1=arr[i].split('=');
+			if (arr1[0]==key) {
+				return unescape(arr1[1]);
+			};
+		};
+		return false;
+	}
+	function removeCookie (key) {
+		setCookie (key,'0',-1);
+	}
+
+
+	$('.login').click(function  () {
+		if ($('#user').val()==''||$('#pass').val()=='') {
+			alert('用户名与密码不能为空！');
+		}else if(getCookie('user')==$('#user').val()&&getCookie('pass')==$('#pass').val()){
+			alert('登录成功！')
+			window.open('aiyu.html');
+		}else{
+			alert('用户名与密码必须一致');
+			// $('#user').val()='';
+			// $('#pass').val()=''；
+		};
+	})
+</script>
+</html>
