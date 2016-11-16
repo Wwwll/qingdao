@@ -1,0 +1,89 @@
+<!doctype html>
+<html style="font-size:100px;">
+<head>
+	<meta charset="utf-8">
+	<title>发消息</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+	<link rel="stylesheet" href="css/reset.css">
+	<style>
+		.box{
+			width: 6.4rem;
+			height: 11.36rem;
+			background: url(images/pair.png) 0 0 no-repeat;
+			background-size: 100% 100%;
+		}
+		.logintop{
+			height: .8rem;
+			line-height: .8rem;
+			text-align: center;
+			background: #e83e4a;
+		}
+		.logintop li:nth-child(1){
+			font-size: .34rem;
+			color: #fff;
+			float: left;
+			padding-left: .1rem;
+		}
+		.logintop li:nth-child(2){
+			font-size: .34rem;
+			color: #fff;
+			float: right;
+			padding-right: .2rem;
+		}
+		.idea{
+			width: 6.1rem;
+			height: 1.8rem;
+			background: #fff;
+			border-radius: 0.05rem;
+			margin: .2rem auto;
+			padding: .35rem .30rem;
+			box-sizing: border-box;
+			font-size: .2rem;
+			color: #666;
+		}
+		.igg{
+			width: 6.1rem;
+			height: 1.15rem;
+			margin: .2rem auto;			
+		}
+		.igg img{
+			margin-left: .45rem;
+		}
+		.box .igg img:nth-child(1){
+			margin-left: 0;
+		}
+		.jia{
+			margin-left: .15rem;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<ul class="logintop">
+			<li class="back">&lt;</li>
+			<li>发送</li>
+		</ul>
+		<div class="idea">
+			写下你此刻的想法......
+		</div>
+		<div class="igg">
+			<img src="images/s1.png" alt="">
+			<img src="images/s2.png" alt="">
+			<img src="images/s1.png" alt="">
+			<img src="images/s2.png" alt="">
+		</div>
+		<div class="jia">
+			<img src="images/jia.png" alt="">
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/ort.js"></script>
+<script type="text/javascript">
+	$('.back').click(function  () {
+		window.open('shuoshuo.html','_blank')
+	})
+</script>
+</html>
